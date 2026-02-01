@@ -31,6 +31,6 @@
 #define __SYS_CONFIG_H_
 
 /* Build for 175x/6x chip family */
-#define CHIP_LPC175X_6X
+//#define CHIP_LPC175X_6X
 
 #endif /* __SYS_CONFIG_H_ */
