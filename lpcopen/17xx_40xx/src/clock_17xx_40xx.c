@@ -327,7 +327,12 @@ uint32_t Chip_Clock_GetSYSCLKRate(void)
 #if defined(CHIP_LPC175X_6X)
 	case (uint32_t) SYSCTL_PLLCLKSRC_RTC:
 		return Chip_Clock_GetRTCOscRate();
+#else
+	case (uint32_t) SYSCTL_PLLCLKSRC_RESERVED1:
+		// fallthrough
 #endif
+	case (uint32_t) SYSCTL_PLLCLKSRC_RESERVED2:
+		return 0;
 	}
 	return 0;
 }
