@@ -85,7 +85,7 @@ void Chip_Clock_SetupPLL(CHIP_SYSCTL_PLL_T PLLNum, uint32_t msel, uint32_t psel)
 #endif
 
 	LPC_SYSCTL->PLL[PLLNum].PLLCFG = PLLcfg;
-	LPC_SYSCTL->PLL[PLLNum].PLLCON = 0x1;
+	//LPC_SYSCTL->PLL[PLLNum].PLLCON = 0x1;
 	Chip_Clock_FeedPLL(PLLNum);
 }
 
